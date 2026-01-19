@@ -1,0 +1,32 @@
+[00:04:56.930] Server  ERROR   Error: Cannot find module 'next/dist/compiled/cookie'
+Require stack:
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/api-utils/get-cookie-parser.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/shared/lib/router/utils/prepare-destination.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/shared/lib/router/utils/middleware-route-matcher.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/router-utils/filesystem.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/router-server.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/start-server.js
+[00:04:56.954] Server  ERROR   Error: Cannot find module 'next/dist/compiled/cookie'
+Require stack:
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/api-utils/get-cookie-parser.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/shared/lib/router/utils/prepare-destination.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/shared/lib/router/utils/middleware-route-matcher.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/router-utils/filesystem.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/router-server.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/start-server.js
+[00:04:57.009] Server  ERROR   Error: Cannot find module 'next/dist/compiled/cookie'
+Require stack:
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/api-utils/get-cookie-parser.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/shared/lib/router/utils/prepare-destination.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/shared/lib/router/utils/middleware-route-matcher.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/router-utils/filesystem.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/router-server.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/start-server.js
+[00:04:57.053] Server  ERROR   Error: Cannot find module 'next/dist/compiled/cookie'
+Require stack:
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/api-utils/get-cookie-parser.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/shared/lib/router/utils/prepare-destination.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/shared/lib/router/utils/middleware-route-matcher.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/router-utils/filesystem.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/router-server.js
+- /Users/angelantwi-mensah/Tiger_Faith/tiger-faith/node_modules/next/dist/server/lib/start-server.js
