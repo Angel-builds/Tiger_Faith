@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import CampusSwitch from './CampusSwitch';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -12,7 +11,6 @@ const navLinks = [
   { name: 'Events', path: '/events' },
   { name: 'Leadership', path: '/leadership' },
   { name: 'Publications', path: '/publications' },
-  { name: 'Connect', path: '/connect' },
   { name: 'Give', path: '/give' },
 ];
 
@@ -25,8 +23,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 -ml-2">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 h-20 flex items-center justify-between">
+        {/* Logo - Far Left */}
+        <Link href="/" className="flex items-center gap-3">
           <div className="relative size-30">
             <Image 
               src="/TF_logo.png" 
@@ -42,16 +41,15 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Nav - Menu Button */}
+        {/* Desktop Nav - Far Right */}
         <div className="hidden lg:flex items-center gap-4">
           <div className="relative">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="flex items-center gap-2 px-4 py-2 text-sm font-bold uppercase tracking-tight text-accent-black hover:text-primary transition-colors"
             >
-              <span>Menu</span>
-              <span className="material-symbols-outlined text-xl">
-                {isMenuOpen ? 'expand_less' : 'expand_more'}
+              <span className="material-symbols-outlined text-2xl">
+                {isMenuOpen ? 'close' : 'menu'}
               </span>
             </button>
 
@@ -65,8 +63,8 @@ export default function Navbar() {
                     onClick={() => setIsMenuOpen(false)}
                     className={`block px-4 py-2 text-sm font-bold uppercase tracking-tight transition-colors ${
                       isActive(link.path) 
-                        ? 'text-primary bg-primary/5' 
-                        : 'text-accent-black hover:text-primary hover:bg-gray-50'
+                        ? 'text-amber-500 bg-amber-50 border-l-4 border-amber-500' 
+                        : 'text-gray-800 hover:text-amber-500 hover:bg-gray-50'
                     }`}
                   >
                     {link.name}
@@ -76,10 +74,9 @@ export default function Navbar() {
             )}
           </div>
 
-          <CampusSwitch />
           <Link 
             href="/connect" 
-            className="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-black uppercase tracking-wider hover:bg-accent-black transition-all"
+            className="bg-amber-500 text-white px-6 py-2.5 rounded-full text-sm font-black uppercase tracking-wider hover:bg-amber-600 transition-all"
           >
             Join Us
           </Link>
@@ -104,7 +101,7 @@ export default function Navbar() {
               href={link.path}
               onClick={() => setIsOpen(false)}
               className={`block text-lg font-bold uppercase transition-colors ${
-                isActive(link.path) ? 'text-primary' : 'text-accent-black'
+                isActive(link.path) ? 'text-amber-500 border-l-4 border-amber-500 pl-4' : 'text-gray-800'
               }`}
             >
               {link.name}
@@ -113,7 +110,7 @@ export default function Navbar() {
           <Link 
             href="/connect" 
             onClick={() => setIsOpen(false)}
-            className="block w-full text-center bg-primary text-white py-4 rounded-xl font-black uppercase tracking-widest shadow-lg shadow-primary/20"
+            className="block w-full text-center bg-amber-500 text-white py-4 rounded-xl font-black uppercase tracking-widest shadow-lg shadow-amber-500/20 hover:bg-amber-600"
           >
             Get Involved
           </Link>
