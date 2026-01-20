@@ -6,19 +6,10 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import CampusSwitch from './CampusSwitch';
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-
-  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Events', path: '/events' },
-    { name: 'Leadership', path: '/leadership' },
-    { name: 'Publications', path: '/publications' },
-    { name: 'Newsletters', path: '/newsletters' },
-    { name: 'Give', path: '/give' },
-  ];
 
   const isActive = (path: string) => pathname === path;
 
