@@ -6,16 +6,26 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import CampusSwitch from './CampusSwitch';
 
+const navLinks = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Events', path: '/events' },
+  { name: 'Leadership', path: '/leadership' },
+  { name: 'Publications', path: '/publications' },
+  { name: 'Connect', path: '/connect' },
+  { name: 'Give', path: '/give' },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const isActive = (path: string) => pathname === path;
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px2 md:px2 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 -ml-2">
           <div className="relative size-30">
             <Image 
@@ -32,23 +42,40 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              href={link.path}
-              className={`text-sm font-bold uppercase tracking-tight transition-colors ${
-                isActive(link.path) ? 'text-primary' : 'text-accent-black hover:text-primary'
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Right Side Actions */}
+        {/* Desktop Nav - Menu Button */}
         <div className="hidden lg:flex items-center gap-4">
+          <div className="relative">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="flex items-center gap-2 px-4 py-2 text-sm font-bold uppercase tracking-tight text-accent-black hover:text-primary transition-colors"
+            >
+              <span>Menu</span>
+              <span className="material-symbols-outlined text-xl">
+                {isMenuOpen ? 'expand_less' : 'expand_more'}
+              </span>
+            </button>
+
+            {/* Dropdown Menu */}
+            {isMenuOpen && (
+              <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    href={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block px-4 py-2 text-sm font-bold uppercase tracking-tight transition-colors ${
+                      isActive(link.path) 
+                        ? 'text-primary bg-primary/5' 
+                        : 'text-accent-black hover:text-primary hover:bg-gray-50'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           <CampusSwitch />
           <Link 
             href="/connect" 
