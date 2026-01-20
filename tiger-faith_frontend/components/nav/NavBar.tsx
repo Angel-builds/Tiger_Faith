@@ -36,7 +36,7 @@ export default function Navbar() {
             />
           </div>
           <div>
-            <h1 className="text-xl font-black tracking-tight leading-none uppercase text-accent-black">Tiger Faith</h1>
+            <h1 className="text-2xl font-black tracking-tight leading-none uppercase text-accent-black">Tiger Faith</h1>
             <span className="text-[10px] font-bold text-primary tracking-[0.2em] uppercase">Grambling & Lancaster</span>
           </div>
         </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="flex items-center gap-2 px-4 py-2 text-sm font-bold uppercase tracking-tight text-accent-black hover:text-primary transition-colors"
             >
-              <span className="material-symbols-outlined text-2xl">
+              <span className="material-symbols-outlined text-xl">
                 {isMenuOpen ? 'close' : 'menu'}
               </span>
             </button>
