@@ -1,4 +1,5 @@
 import Navbar from "@/components/nav/NavBar";
+import Footer from "@/components/sections/Footer";
 
 export default function PublicationsPage() {
   return (
@@ -10,6 +11,7 @@ export default function PublicationsPage() {
           <p className="text-gray-600">Read our latest publications and resources.</p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

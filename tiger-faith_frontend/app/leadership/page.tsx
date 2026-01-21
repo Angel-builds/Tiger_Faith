@@ -1,4 +1,5 @@
 import Navbar from "@/components/nav/NavBar";
+import Footer from "@/components/sections/Footer";
 
 export default function LeadershipPage() {
   return (
@@ -10,6 +11,7 @@ export default function LeadershipPage() {
           <p className="text-gray-600">Meet our Tiger Faith leadership team.</p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

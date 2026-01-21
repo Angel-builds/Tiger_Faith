@@ -1,4 +1,5 @@
 import Navbar from "@/components/nav/NavBar";
+import Footer from "@/components/sections/Footer";
 
 export default function ConnectPage() {
   return (
@@ -21,6 +22,7 @@ export default function ConnectPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

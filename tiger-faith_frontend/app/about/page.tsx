@@ -1,4 +1,5 @@
 import Navbar from "@/components/nav/NavBar";
+import Footer from "@/components/sections/Footer";
 
 export default function AboutPage() {
   return (
@@ -10,6 +11,7 @@ export default function AboutPage() {
           <p className="text-gray-600">Learn more about Tiger Faith and our mission.</p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

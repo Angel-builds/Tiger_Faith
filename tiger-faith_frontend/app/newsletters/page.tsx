@@ -1,4 +1,5 @@
 import Navbar from "@/components/nav/NavBar";
+import Footer from "@/components/sections/Footer";
 
 export default function NewslettersPage() {
   return (
@@ -10,6 +11,7 @@ export default function NewslettersPage() {
           <p className="text-gray-600">Read our latest newsletters and updates.</p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

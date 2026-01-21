@@ -1,4 +1,5 @@
 import Navbar from "@/components/nav/NavBar";
+import Footer from "@/components/sections/Footer";
 
 export default function EventsPage() {
   return (
@@ -10,6 +11,7 @@ export default function EventsPage() {
           <p className="text-gray-600">Upcoming Tiger Faith events and activities.</p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Navbar from "@/components/nav/NavBar";
+import Footer from "@/components/sections/Footer";
 
 export default function GivePage() {
   return (
@@ -10,6 +11,7 @@ export default function GivePage() {
           <p className="text-gray-600">Support Tiger Faith through your generous giving.</p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
