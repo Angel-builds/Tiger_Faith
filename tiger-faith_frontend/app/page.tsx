@@ -1,5 +1,8 @@
 import Navbar from "@/components/nav/NavBar";
 import Hero from "@/components/sections/Hero";
+import Gatherings from "@/components/sections/Gatherings";
+import CTA from "@/components/sections/CTA";
+import Testimonials from "@/components/sections/Testimonials";
 import Footer from "@/components/sections/Footer";
 
 export default function HomePage() {
@@ -7,7 +10,9 @@ export default function HomePage() {
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <Hero />
-      <div className="flex-grow" />
+      <Gatherings />
+      <CTA />
+      <Testimonials />
       <Footer />
     </main>
   );
