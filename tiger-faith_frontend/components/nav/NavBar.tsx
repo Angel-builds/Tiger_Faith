@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { MdMenu, MdClose } from 'react-icons/md';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -48,9 +49,11 @@ export default function Navbar() {
             className="flex items-center gap-2 px-4 py-2 text-sm font-bold uppercase tracking-tight text-black hover:text-amber-500 transition-colors"
             aria-label="Toggle menu"
           >
-            <span className="material-symbols-outlined text-2xl">
-              {isMenuOpen ? 'close' : 'menu'}
-            </span>
+            {isMenuOpen ? (
+              <MdClose className="text-2xl" />
+            ) : (
+              <MdMenu className="text-2xl" />
+            )}
             <span className="hidden md:inline">Menu</span>
           </button>
 

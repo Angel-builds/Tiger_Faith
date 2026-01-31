@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { MdCalendarMonth, MdArrowForward, MdSchedule, MdBookmark } from 'react-icons/md';
 
 interface GatheringEvent {
   id: string;
@@ -54,7 +55,7 @@ export default function Gatherings() {
         <div className="mb-12">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <span className="material-symbols-outlined text-amber-500 text-3xl">calendar_month</span>
+              <MdCalendarMonth className="text-amber-500 text-3xl" />
               <h2 className="text-4xl md:text-5xl font-black text-black">GATHERINGS</h2>
             </div>
             <Link 
@@ -62,7 +63,7 @@ export default function Gatherings() {
               className="bg-amber-500 text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-amber-600 transition-all flex items-center gap-2"
             >
               Full Calendar
-              <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              <MdArrowForward className="text-lg" />
             </Link>
           </div>
         </div>
@@ -79,7 +80,7 @@ export default function Gatherings() {
           </h3>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
             Tiger Faith is an energetic, faith-based campus ministry serving the students of Grambling 
-            State and Lancaster. We aren't just an organization; we are a family dedicated to walking 
+            State and Lancaster. We aren&apos;t just an organization; we are a family dedicated to walking
             through the ups and downs of college life together, anchored in love and purpose.
           </p>
         </div>
@@ -118,11 +119,11 @@ export default function Gatherings() {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-gray-700">
-                    <span className="material-symbols-outlined text-amber-500">schedule</span>
+                    <MdSchedule className="text-amber-500" />
                     <span className="font-bold text-sm">{event.time}</span>
                   </div>
                   <button className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center hover:bg-amber-600 transition-colors">
-                    <span className="material-symbols-outlined text-white text-lg">bookmark</span>
+                    <MdBookmark className="text-white text-lg" />
                   </button>
                 </div>
               </div>
