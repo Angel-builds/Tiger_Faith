@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { MdMail, MdLocationOn } from 'react-icons/md';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -75,7 +76,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-amber-400 text-xl">mail</span>
+                <MdMail className="text-amber-400 text-xl" />
                 <a
                   href="mailto:hello@tigerfaith.edu"
                   className="text-gray-400 hover:text-amber-400 transition-colors"
@@ -84,7 +85,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-amber-400 text-xl">location_on</span>
+                <MdLocationOn className="text-amber-400 text-xl" />
                 <div className="text-gray-400">
                   <p>Grambling, LA &</p>
                   <p>Lancaster, PA</p>

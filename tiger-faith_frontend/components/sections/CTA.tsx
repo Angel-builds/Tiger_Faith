@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { MdGroupAdd, MdLogin, MdFavorite, MdArrowForward } from 'react-icons/md';
 
 interface CTACard {
-  icon: string;
+  Icon: React.ElementType;
   title: string;
   description: string;
   buttonText: string;
@@ -10,21 +11,21 @@ interface CTACard {
 
 const ctaCards: CTACard[] = [
   {
-    icon: "group_add",
+    Icon: MdGroupAdd,
     title: "BECOME A MEMBER",
     description: "Join a community committed to growth, service, and building lasting friendships on campus.",
     buttonText: "LEARN MORE",
     buttonLink: "/about"
   },
   {
-    icon: "login",
+    Icon: MdLogin,
     title: "SHARE A TESTIMONY",
     description: "Your story has the power to inspire. Share how your journey is unfolding at Tiger Faith.",
     buttonText: "SUBMIT STORY",
     buttonLink: "/connect"
   },
   {
-    icon: "favorite",
+    Icon: MdFavorite,
     title: "GIVE LIFE TO CHRIST",
     description: "Take the first step in a life-changing relationship. We're here to walk beside you.",
     buttonText: "START HERE",
@@ -55,9 +56,7 @@ export default function CTA() {
             >
               {/* Icon */}
               <div className="w-16 h-16 rounded-full bg-amber-500 flex items-center justify-center mb-6">
-                <span className="material-symbols-outlined text-black text-3xl font-bold">
-                  {card.icon}
-                </span>
+                <card.Icon className="text-black text-3xl font-bold" />
               </div>
 
               {/* Content */}
@@ -74,9 +73,7 @@ export default function CTA() {
                 className="inline-flex items-center gap-2 text-amber-500 font-bold text-sm uppercase tracking-wider hover:text-amber-400 transition-colors group"
               >
                 {card.buttonText}
-                <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
-                  arrow_forward
-                </span>
+                <MdArrowForward className="text-lg group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           ))}
