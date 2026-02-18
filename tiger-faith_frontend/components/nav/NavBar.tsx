@@ -12,6 +12,7 @@ const navLinks = [
   { name: 'Leadership', path: '/leadership' },
   { name: 'Publications', path: '/publications' },
   { name: 'Newsletters', path: '/newsletters' },
+  { name: 'Connect', path: '/connect' },
   { name: 'Give', path: '/give' },
 ];
 
@@ -43,16 +44,15 @@ export default function Navbar() {
 
         {/* Menu Button with Dropdown */}
         <div className="relative">
-          <button
+            <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="flex items-center gap-2 px-4 py-2 text-sm font-bold uppercase tracking-tight text-black hover:text-amber-500 transition-colors"
             aria-label="Toggle menu"
-          >
+            >
             <span className="material-symbols-outlined text-2xl">
               {isMenuOpen ? 'close' : 'menu'}
             </span>
-            <span className="hidden md:inline">Menu</span>
-          </button>
+            </button>
 
           {/* Dropdown Menu */}
           {isMenuOpen && (

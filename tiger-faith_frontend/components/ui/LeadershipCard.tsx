@@ -5,9 +5,10 @@ interface LeadershipCardProps {
   position: string;
   image: string;
   bio?: string;
+  campus: 'Grambling' | 'Lancaster';
 }
 
-export default function LeadershipCard({ name, position, image, bio }: LeadershipCardProps) {
+export default function LeadershipCard({ name, position, image, bio, campus }: LeadershipCardProps) {
   return (
     <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-amber-500 flex flex-col h-full">
       {/* Image Container */}
@@ -24,7 +25,8 @@ export default function LeadershipCard({ name, position, image, bio }: Leadershi
       <div className="p-6 flex-grow">
         <div className="mb-3">
           <h3 className="text-2xl font-bold text-black mb-1">{name}</h3>
-          <p className="text-amber-500 font-bold text-sm uppercase tracking-wider">{position}</p>
+          <p className="text-amber-500 font-bold text-sm uppercase tracking-wider mb-1">{position}</p>
+          <p className="text-gray-500 text-xs uppercase tracking-wider">{campus} Campus</p>
         </div>
         
         {bio && (
